@@ -144,10 +144,6 @@ a.footerlink{
 
 @media only screen and (max-width: 1100px) {
 
-    body{
-        background-color: purple;
-    }
-
     div.controw{
         flex-direction: column;
     }
