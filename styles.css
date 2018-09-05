@@ -21,8 +21,9 @@ img.youdied{
 }
 
 body{
-    background-color: green;
+    background-image: url(background.png);
     font-family: Helvetica;
+    background-attachment: fixed;
 }
 
 div.containall{
