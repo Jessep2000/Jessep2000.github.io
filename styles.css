@@ -1,0 +1,188 @@
+@-webkit-keyframes youdied {
+    0% {transform: rotate(0deg); color: red;}
+    25% {transform: rotate(72deg); color: yellow;}
+    50% {transform: rotate(144deg); color: green;}
+    75% {transform: rotate(216deg); color: blue;}
+    100%{transform: rotate(288deg); color: purple}
+}
+
+body.youdied{
+    background-image: url(giiiiif.gif);
+    background-size: 80px;
+    background-repeat: repeat;
+}
+
+img.youdied{
+    transform: rotate(20deg);
+    -webkit-animation: youdied .1s linear 1s infinite alternate;
+    animation: youdied .1s linear 1s infinite alternate;
+    font-size: 400px;
+    margin: auto
+}
+
+body{
+    background-color: green;
+    font-family: Helvetica;
+}
+
+div.containall{
+    display: flex;
+    /*border: 2px blue solid;*/
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+div.menu{
+    align-self: center;
+    width: 80vw;
+    display: flex;
+    background-color: grey;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-evenly;  
+}
+
+div.button{
+    background-color: grey;
+    width: 15vw;
+    text-align: center;
+}
+
+div.button:hover{
+    background-color: orange;
+    font-weight: bold;
+}
+
+div.cont1{
+    align-self: center;
+    width: 80vw;
+    display: flex;
+    background-color: rgb(255, 231, 187);
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.cont2{
+
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    padding: .5vw;
+    /*border: 2px blue solid;*/
+}
+
+div.controw{
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+}
+
+div.spacer{
+    padding: 5px;
+   /* border: solid 2px yellow;*/
+}
+
+div.footer{
+    align-self: center;
+    width: 80vw;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+p.menubutton{
+    padding: 5px;
+}
+
+td.btrue::after{
+    content: "behaald";
+    background-color: greenyellow;
+}
+
+td.bfalse::after{
+    content: "niet behaald";
+    background-color: red;
+}
+
+td.bpending::after{
+    content: "in afwachting";
+    background-color: #00c3ff;
+}
+
+td, th{
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+    background-color: #eeeeee;
+    }
+
+
+h2{
+    font-size: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: darkblue;
+}
+
+a.menu{
+    color: black;
+}
+
+a.footerlink{
+    color: orange;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 20px;    
+}
+
+@media only screen and (max-width: 1100px) {
+
+    body{
+        background-color: purple;
+    }
+
+    div.controw{
+        flex-direction: column;
+    }
+
+    div.menu{
+        align-self: center;
+        width: 80vw;
+        display: flex;
+        background-color: grey;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2px;
+        justify-content: space-evenly;  
+        border-radius: 5px;
+    }
+
+    div.button{
+        background-color: grey;
+        width: 100%;
+        text-align: center;
+        align-self: center;
+    }
+    
+    div.button:hover{
+        background-color: orange;
+        border: 2px grey solid;
+        border-radius: 5px;
+    }
+    
+    div.cont1{
+        border-radius: 5px;
+    }
+
+    div.footer{
+        flex-direction: column;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
