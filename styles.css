@@ -148,6 +148,7 @@ a.footerlink{
         display:none;
     }
 
+<<<<<<< HEAD
     div.mmcontent{
         display: none;
     }
@@ -155,6 +156,8 @@ a.footerlink{
 
 @media only screen and (max-width: 1100px) {
 
+=======
+>>>>>>> 90f7260bbffe714cd40fd54197743172685ad828
     div.controw{
         flex-direction: column;
     }
