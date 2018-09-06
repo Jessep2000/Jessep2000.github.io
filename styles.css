@@ -177,7 +177,6 @@ a.footerlink{
         background-color: grey;
         flex-direction: column;
         flex-wrap: wrap;
-        padding: 2px;
         justify-content: space-evenly;  
         border-radius: 5px;
         display: none;
