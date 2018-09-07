@@ -1,3 +1,31 @@
+@-webkit-keyframes roll {
+    from { -webkit-transform: rotate(0deg) }
+    to   { -webkit-transform: rotate(360deg) }
+}
+
+@-moz-keyframes roll {
+    from { -moz-transform: rotate(0deg) }
+    to   { -moz-transform: rotate(360deg) }
+}
+
+@keyframes roll {
+    from { transform: rotate(0deg) }
+    to   { transform: rotate(360deg) }
+}
+
+body {
+    -moz-animation-name: roll;
+    -moz-animation-duration: .7s;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-name: roll;
+    -webkit-animation-duration: .7s;
+    -webkit-animation-iteration-count: 1;
+}
+
+html,body,div,iframe {
+   overflow: hidden;
+}
+
 @-webkit-keyframes youdied {
     0% {
         transform: rotate(0deg);
@@ -91,7 +119,7 @@ div.cont2 {
     width: 80vw;
     display: flex;
     flex-direction: column;
-    padding: .5vw;
+    padding: 2vw;
     /*border: 2px blue solid;*/
 }
 
@@ -141,8 +169,9 @@ td, th {
     background-color: #eeeeee;
 }
 
-h3{
+h3 {
     font-size: 1.5em;
+    margin: 0;
 }
 
 h2 {
@@ -172,6 +201,20 @@ a.footerlink {
     font-size: 20px;
 }
 
+p.ea3::after{
+    content: "heb afgelopen jaar mijn havo diploma behaald en ik zou het zonde vinden om mijn capaciteiten niet te gebruiken. Ook denk ik dat het HBO niveau van deze opleiding het beste bij mij past omdat het de juiste combinatie is van theorie en praktijk.";
+}
+
+p.ea3:hover::after{
+    content:"BEN HOOG GELEID G";
+}
+
+img.prof {
+    width: 300px;
+    align-self: center;
+    vertical-align: center;
+}
+
 @media only screen and (min-width: 100px) {
     div.mobilemenu {
         display: none;
@@ -182,6 +225,10 @@ a.footerlink {
 }
 
 @media only screen and (max-width: 1100px) {
+    img.prof {
+        align-self: center;
+        width: 100px;
+    }
     h1 {
         font-size: 1.5em;
         text-align: center;
