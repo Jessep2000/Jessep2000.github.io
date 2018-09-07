@@ -1,4 +1,4 @@
-/* @-webkit-keyframes roll {
+@-webkit-keyframes roll {
     from { -webkit-transform: rotate(0deg) }
     to   { -webkit-transform: rotate(360deg) }
 }
@@ -22,7 +22,7 @@ body {
     -webkit-animation-iteration-count: 1;
 }
 
-/* barrel roll*/
+
 
 div{
     /* border: 2px rgb(255, 0, 221) solid; */
@@ -88,7 +88,7 @@ div.cont1 {
     align-self: center;
     width: 80vw;
     display: flex;
-    background-color: rgba(255, 224, 167, 0.5);
+    background-color: rgba(167, 249, 255, 0.5);
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
