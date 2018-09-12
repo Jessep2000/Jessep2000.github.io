@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITEL</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <link rel="stylesheet" type="text/css" href="opdr1style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="containall">
+        <div class="spacer"></div>
+        <div class="cont1">
+            <h1 class="titel">TITEL</h1>
+        </div>
+        <div class="spacer"></div>
+        <div class="mobilemenu">
+            <div id="mmmbutton">
+                <p class="menubutton">
+                    Menu
+                </p>
+                <div id="mmcontent">
+                    <p class="menubutton">
+                        <a href="/compscience/Compscience.html" class="menu">
+                            Computer Science
+                        </a>
+                    </p>
+                </div>
+                <div id="mmcontent">
+                    <p class="menubutton">
+                        <a href="programming/programming.html" class="menu">
+                            Programming
+                        </a>
+                    </p>
+                </div>
+                <div id="mmcontent">
+                    <p class="menubutton">
+                        <a href="SLO/slo.html" class="menu">
+                            Studie Loopbaan Orientatie
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="button">
+                <p class="menubutton">
+                    <a class="menu" href="../compscience/Compscience.html">
+                        Computer Science
+                    </a>
+                </p>
+            </div>
+            <div class="button">
+                <p class="menubutton">
+                    <a class="menu" href="../programming/programming.html">
+                        Programming
+                    </a>
+                </p>
+            </div>
+            <div class="button">
+                <p class="menubutton">
+                    <a class="menu" href="../SLO/slo.html">
+                        Studie Loopbaan Orientatie
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="cont1">
+            <div class="cont2">
+                <h1>
+                    opdracht
+                </h1>
+            </div>
+            <div class="cont2">
+                <canvas  background-color="white" width="300" height="300" id="canvas1"></canvas>
+                <script>
+                    var c = document.getElementById("canvas1");
+                    var ctx = c.getContext("2d");
+
+                    ctx.moveTo(300,300);
+                    ctx.lineTo(0,0);
+                    ctx.stroke();
+                </script>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="cont1">
+            <div class="cont2">
+                beoordeling
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="footer">
+            <div class="cont2">
+                <form>
+                    <button class="button" type="button" onclick="history.back()"><a class="footerlink">terug</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
