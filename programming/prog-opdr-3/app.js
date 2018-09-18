@@ -1,6 +1,5 @@
-let output;
-
 //opdracht 1 (if / else statement)
+let output;
 
 function knop() {
     let cijfer = document.getElementById("cijfer").value;
@@ -20,49 +19,37 @@ function knop() {
     document.getElementById("outputht").innerHTML = output;
 }
 //opdracht 2 (switch statement)
+let outputswitch;
 
-function knop() {
-    let cijfer = document.getElementById("cijfer").value;
-    console.log(cijfer);
-    switch (cijfer) {
+function knopswitch() {
+    let cijferswitch = document.getElementById("cijfersw").value;
+    switch (cijferswitch) {
         case "1":
-            output = "Onvoldoende";
-            break;
         case "2":
-            output = "Onvoldoende";
-            break;
         case "3":
-            output = "Onvoldoende";
-            break;
         case "4":
-            output = "Onvoldoende";
-            break;
         case "5":
-            output = "Onvoldoende";
+            outputswitch = "Onvoldoende";
             break;
         case "6":
-            output = "Voldoende";
-            break;
         case "7":
-            output = "Voldoende";
+            outputswitch = "Voldoende";
             break;
         case "8":
-            output = "Goed";
-            break;
         case "9":
-            output = "Goed";
+            outputswitch = "Goed";
             break;
         case "10":
-            output = "Uitmunted";
+            outputswitch = "Uitmunted";
             break;
     }
-    // console.log(output);
-    end(output);
+    // console.log(outputswitch);
+    end(outputswitch);
 }
 
-function end(output) {
-    // console.log(output);
-    document.getElementById("outputht").innerHTML = output;
+function end(outputswitch) {
+    // console.log(outputswitch);
+    document.getElementById("outputhtswitch").innerHTML = outputswitch;
 }
 
 //opdracht 3
