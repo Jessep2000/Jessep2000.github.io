@@ -6,11 +6,11 @@ function knop() {
     console.log(cijfer);
     if (cijfer > 10 || cijfer < 0) {
         output = 'voer een cijfer tussen 0 en 10 in';
-    } else if (cijfer < 6) {
+    } else if (cijfer <= 5) {
         output = 'onvoldoende';
-    } else if (cijfer < 7) {
+    } else if (cijfer == 6 || cijfer == 7) {
         output = 'voldoende';
-    } else if (cijfer < 9) {
+    } else if (cijfer == 8 || cijfer == 9) {
         output = 'goed';
     } else {
         output = 'uitmuntend';
@@ -58,16 +58,8 @@ let purchasedBook = true,
     job = "teacher",
     inTrain = true;
 
-if (purchasedBook == true) {
-    if (inTrain == true) {
-        if (job == 'teacher') {
-            console.log('Finaly I can enjoy my book');
-        } else {
-            console.log('darn students');
-        }
-    } else {
-        console.log('darn students');
-    }
-} else {
-    console.log('darn students')
+if (purchasedBook == true && inTrain == true && job == 'teacher'){
+    console.log('Finaly I can enjoy my book');
+} else{
+    console.log('darn students!');
 }
