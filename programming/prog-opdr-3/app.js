@@ -58,7 +58,7 @@ let purchasedBook = true,
     job = "teacher",
     inTrain = true;
 
-if (purchasedBook == true && inTrain == true && job == 'teacher'){
+if (purchasedBook && inTrain && job == 'teacher'){
     console.log('Finaly I can enjoy my book');
 } else{
     console.log('darn students!');
