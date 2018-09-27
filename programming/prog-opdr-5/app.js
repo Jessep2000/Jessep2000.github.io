@@ -63,35 +63,35 @@
 
 //! Huiswerk opdracht 1
 
-// function fibonachi(){
-//     let a = 1
-//     let b = 1
-//     while (a < 50){
-//         console.log(a);
-//         console.log(b);
-//         a = a + b;
-//         b = a + b;
-//     }
-// }
+function fibonachi(){
+    let a = 1
+    let b = 1
+    while (a < 50){
+        console.log(a);
+        console.log(b);
+        a = a + b;
+        b = a + b;
+    }
+}
 
-// fibonachi();
+fibonachi();
 
 //! Huiswerk opdracht 2
 
-// let timeleft = 10;
-// let year = new Date();
+let timeleft = 10;
+let year = new Date();
 
-// function countdown() {
-//     if(timeleft > 0) {
-//         setTimeout(countdown, 1000);
-//         console.log(timeleft);
-//         timeleft--;
-//     } else {
-//         console.log(`Happy new ${year.getFullYear()}`);
-//     }    
-// }
+function countdown() {
+    if(timeleft > 0) {
+        setTimeout(countdown, 1000);
+        console.log(timeleft);
+        timeleft--;
+    } else {
+        console.log(`Happy new ${year.getFullYear()}`);
+    }    
+}
 
-// countdown();
+countdown();
 
 //! Huiswerk opdracht 3
 
