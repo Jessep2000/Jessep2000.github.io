@@ -64,7 +64,7 @@ while (ii < 100) {
     bb = ii + bb;
 }
 
-//opracht 1
+//opracht 3
 for (i = 1; i == 1; i++) {
     let array = [2, 4, 8, 9, 12, 13];
 
@@ -72,6 +72,6 @@ for (i = 1; i == 1; i++) {
         return total + num;
     }
 
-    console.log(array.reduce(Total)); //TODO [array naam].reduce([functie die op elk onderdeel van de array uitgevoerd word])
+    console.log(array.reduce(Total)); //TODO [array naam].reduce([FUNCTIE('Totaal' 'currentvalue' 'currentindex' 'arr')]) reduceert waarden binnen een array naar 1 waarde
 }   
 
