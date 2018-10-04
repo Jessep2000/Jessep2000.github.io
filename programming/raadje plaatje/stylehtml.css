@@ -2,6 +2,10 @@ div {
     /* border: 2px rgb(255, 0, 212) solid; */
 }
 
+body{
+    background-image: url("win.gif");
+}
+
 .containall {
     display: flex;
     justify-content: center;
@@ -9,6 +13,12 @@ div {
 }
 
 .objectivecontainer {
+    padding: 10px;
+    width: 70vw;
+    align-self: center;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 5px;
     display: grid;
     grid-template-rows: auto, 100px, 200px, auto;
     grid-template-areas: ". objective scoreboard .";
@@ -72,7 +82,18 @@ div {
     justify-self: start;
 }
 
+#startbutton{
+    color: white;
+    background-color:black;
+}
+
 .game {
+    padding: 10px;
+    width: 70vw;
+    align-self: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: auto, 100px, 100px, 100px, auto;
     grid-template-rows: auto, 100px, 100px, 100px, auto;
@@ -80,6 +101,13 @@ div {
 }
 
 img {
-    width: 100px !important;
-    height: 100px !important;
+    width: 100px ;
+    height: 100px ;
 }
+
+/* @media only screen and(max-width: 400px){
+    img{
+        width: 60px !important;
+        height: 60px !important;
+    }
+} */

@@ -91,4 +91,4 @@ for(i = 0; i <= 2; i++){
     teachers[i].SalaryPerHour = teachers[i].SalaryPerWeek / teachers[i].HoursPerWeek;
 }
 
-console.table(teachers)
+console.table(teachers);

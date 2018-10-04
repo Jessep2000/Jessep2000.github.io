@@ -1,9 +1,5 @@
-let plaatjes = [
-    ['blauw', 'geel', 'groen', 'l-blauw', 'oranje', 'rood', 'roze', 'wit', 'zwart']
-    [1, 2, 3, 4, 5, 6, 7, 8, 9]
-];
-
-// let el1 = document.getElementById('el1');
+//*--- Image placer functie ---*//
+// Zet de images in de html en geeft een waarde aan de respectivelijke inp variabele 
 
 function onload() {
     getrandom();
@@ -30,25 +26,43 @@ function onload() {
     document.getElementById('el9').innerHTML = '<img onclick="clickaction(9, inp9)" src="' + colors[inp9] + '.png" style="height: 100px; width: 100px;"/>';
 }
 
-let inp1;
-let inp2;
-let inp3;
-let inp4;
-let inp5;
-let inp6;
-let inp7;
-let inp8;
-let inp9;
-let answer;
+//*--- globale variabele declaratie ---*//
+
+let inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8, inp9, answer, rand, interrand;
 
 let colors = ['blank', 'roze', 'blauw', 'rood', 'groen', 'oranje', 'geel', 'l-blauw', 'zwart', 'wit'];
 
-let rand;
-let interrand;
+//*--- start functie ---*//
+//zorgt ervoor dat de startbutton functioneerd
+
+let startbuttonactive = '<button onclick="startbutton()">Start!</button>'
+let startbuttonfalse = '';
+
+document.getElementById('start').innerHTML = startbuttonactive;
+
+function startbutton() {
+    document.getElementById('start').innerHTML = startbuttonfalse;
+    score = 0;
+    document.getElementById('points').innerHTML = `Hier komt je score`;
+    var cancel = setInterval(incrementSeconds, 1000);
+}
+
+//*--- resart functie ---*//
+
+function restart() {
+    score = 0;
+    seconds = 30;
+    document.getElementById('starttext').innerHTML = 'volgende level! de tijd gaat nu 2 keer zo snel';
+    startbutton();
+}
+
+//*--- randomizer functie voor het objective ---*//
 
 function getrandom() {
     rand = Math.floor(Math.random() * 8) + 1;
 }
+
+//*--- Randomizer functie voor speel elementen ---*//
 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -63,30 +77,49 @@ function shuffle(a) {
     return a;
 }
 
-var score = 0
+//*--- Timer ---*//
 
-function areaofeffect(){
- score--;
+var seconds = 30;
+
+function incrementSeconds() {
+    if (seconds == 0) {
+        document.getElementById('time').innerHTML = `De tijd is om!`
+        return
+    } else {
+        seconds -= 1;
+        console.log(seconds);
+        document.getElementById('time').innerHTML = `Je hebt nog ${seconds} seconden!`
+        if (seconds / 3 == Math.floor(seconds / 3)) {
+            onload();
+        }
+    }
 }
 
+//*--- Scoreboard en output ---*//
+
+var score = 0
+
 function clickaction(parameter, input) {
-    if (score == 9) {
+    if (seconds <= 0) {
         finish();
     } else {
         if (answer == input) {
-            score ++;
+            console.log(input);
+            score++;
             document.getElementById('points').innerHTML = `${score} Goed bezig!`;
             onload();
         } else {
-            score --;
+            score--;
             document.getElementById('points').innerHTML = `${score} Probeer opnieuw`;
         }
     }
 }
 
+let startbuttonreactive = '<button onclick="restart();">Begin Opnieuw</button>';
+
 function finish() {
-    document.getElementById('points').innerHTML = `Je hebt 20 punten behaald! Gefeliciteerd`;
-    var numbers = [5, 5, 5, 5, 5, 5, 5, 5, 5]
-    document.body.style.background = "url('win.gif')x   ";
+    document.getElementById('points').innerHTML = `Je hebt binnen 30 seconden een score van ${score} punten behaald!`;
+    alert(`Je hebt binnen 30 seconden een score van ${score} punten behaald!`);
     onload();
+    document.getElementById('start').innerHTML = startbuttonreactive;
 }
