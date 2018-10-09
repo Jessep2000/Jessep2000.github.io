@@ -52,7 +52,6 @@ function startbutton() {
 function restart() {
     score = 0;
     seconds = 30;
-    document.getElementById('starttext').innerHTML = 'volgende level! de tijd gaat nu 2 keer zo snel';
     startbutton();
 }
 
@@ -117,9 +116,13 @@ function clickaction(parameter, input) {
 
 let startbuttonreactive = '<button onclick="restart();">Begin Opnieuw</button>';
 
+let playcounter = 1;
+
 function finish() {
-    document.getElementById('points').innerHTML = `Je hebt binnen 30 seconden een score van ${score} punten behaald!`;
-    alert(`Je hebt binnen 30 seconden een score van ${score} punten behaald!`);
+    document.getElementById('points').innerHTML = `Je hebt binnen ${30/playcounter} seconden een score van ${score} punten behaald!`;
+    alert(`Je hebt binnen ${30/playcounter} seconden een score van ${score} punten behaald!`);
+    playcounter = playcounter * 2;
+    document.getElementById('starttext').innerHTML = 'volgende level! de tijd gaat nu ' + playcounter + ' keer zo snel';
     onload();
     document.getElementById('start').innerHTML = startbuttonreactive;
 }
