@@ -27,19 +27,15 @@
 // ]
 
 
-// var body = document.getElementById('body');
-// // function createtable() {
 
-// // }
-
-// // console.log(groceryList[0].name);
+// console.log(groceryList[0].name);
 // for (i = 0; i < 5; i++) {
 //     let tr = document.createElement('tr');
 //     let table = document.createElement('table');
 //     let tdName = document.createElement('td');
 //     let tdPrice = document.createElement('td');
 //     if(i == 4){
-//         tdPrice.innerText = 4.41;
+//        tdPrice.innerText = 4.41;
 //         tdName.innerText = 'total';
 //     } else {
 //     tdPrice.innerText = groceryList[i].price;
@@ -75,36 +71,50 @@
 // let gemiddeldcijfer = totalcijfer /4;
 // console.log(gemiddeldcijfer);
 
-//Opdracht 1
-const Tests = [{
-        'course': 'Computerscience Basics',
-        'grade': 7
-    },
+//!Opdracht 1
 
-    {
-        'course': 'Programming Basics',
-        'grade': 8.6
-    },
+// var cijferCount = document.getElementById('table').rows.length;
 
-    {
-        'course': 'Studieloopbaan Ori\ëntatie',
-        'grade': 5
-    },
+// let cijfers = []
+// for (i = 0; i < cijferCount; i++) {
+//     const table = document.getElementById('table').rows[i].cells[1].innerHTML;
+//     cijfers.push(parseFloat(table));
+// }
 
-    {
-        'course': 'Gamedevelopment with TypeScript',
-        'grade': 6.7
+// console.log(cijfers);
 
-    },
+// function getSum(total, num) {
+//     return total + num;
+// }
 
-];
+// let totcijfer = cijfers.reduce(getSum);
+// let gemcijfer = totcijfer / cijferCount
+// console.log(gemcijfer);
 
-const getAverageGrade = function () {
-    var total = 0;
-    let grade = Tests.reduce(function (elements, index, array) {
-        return total += element.grade;
-    });
+//!opdracht 2
 
-};
+//var ul = document.getElementById("course");
+var ul = document.getElementsByTagName("li");
 
-console.log(total / 4)
+let colors = ['blue', 'red', 'yellow','green','pink','orange','purple']
+
+for (let index = 0; index < ul.length; index++) {
+    ul[index].style.color = colors[index];
+}
+
+
+//! opdracht 3
+
+document.getElementById('button').addEventListener('click', buttonfunction);
+
+function buttonfunction(){
+    let input = document.getElementById('sourceinput').value;
+    createImageElement(input);
+}
+
+function createImageElement(imageSrcName){
+    var createImage = document.createElement('img');
+    createImage.setAttribute('src', imageSrcName);
+    var target = document.getElementById('imghome');
+    target.appendChild(createImage);
+}
